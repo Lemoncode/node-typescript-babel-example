@@ -10,6 +10,7 @@
     "start:dev": "nodemon --exec babel-node --extensions \".ts\" src/index.ts",
     "clean": "rimraf dist",
     "build:prod": "npm run clean && babel src -d dist --ignore=\"./src/**/*.spec.ts\" --extensions \".ts\"",
+    "build:dev": "npm run clean && babel src -d dist --ignore=\"./src/**/*.spec.ts\" --extensions \".ts\" --source-maps",
     "build": "run-p -l type-check build:prod"
   },
   "repository": {
